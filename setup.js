@@ -181,12 +181,6 @@ client.on('webSession', function(sessionID, cookies) {
                 console.log("currency");
             }
         }
-        for (kl=0;kl<listings.length;kl++){
-            for (p=0;p<listings[kl].inventory.length;p++){
-                var item_ID=listings[kl].inventory[p];
-                listings[kl].bought["_"+item_ID]=Number((listings[kl].buyprice.keys + (listings[kl].buyprice.ref/34.11)).toFixed(5));
-            }
-        }
         console.log("writing json....");
         var newjson=JSON.stringify(listings, null , 2);
         fs.writeFile('listings.json', newjson, function(){
