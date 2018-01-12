@@ -87,6 +87,7 @@ exports.createSell = function(itemid, itemIndex){
         var lsellkeysstring = "";
         var lsellPriceKeys=sellpricedata_key;
         var lsellrefstring=sellpricedata_ref;
+        var lmaxstock=listings[itemIndex].maxstock;
         if (lsellPriceKeys==1){
             lsellkeysstring="1 key + ";
         }
