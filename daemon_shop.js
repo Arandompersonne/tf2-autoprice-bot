@@ -801,7 +801,7 @@ function createListings(listing){
     if (listing===0){
         setTimeout(function() {
             setImmediate(function() {
-                exports.updateItem(listings.length-1);
+                createListings(listings.length-1);
             });
         }, 3000);
 
@@ -809,7 +809,7 @@ function createListings(listing){
     else{
         setTimeout(function() {
             setImmediate(function() {
-                exports.updateItem(listing-1);
+                createListings(listing-1);
             });
         }, 3000);
     }
