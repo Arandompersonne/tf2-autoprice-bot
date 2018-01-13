@@ -1,6 +1,5 @@
 # tf2-autoprice-bot
 Automatically buys and sells tf2 items while listing on backpack.tf. The bot has the following features:
-
 - automatically undercuts other sellers on backpack.tf and overcuts on buy orders
 - automatically accepts offers and handles confirmations
 - creates and removes listings on backpack.tf automatically
@@ -8,6 +7,10 @@ Automatically buys and sells tf2 items while listing on backpack.tf. The bot has
 - auto-flips items (i.e. it sells an item immediately after it is bought)
 - checks SR bans
 - calculates profit and logs items sold
+
+
+Major edit:
+autopricing is currently disabled, waiting for fisk response to see what to do. Code is still here just commented out, added basic loop to create listings normally.
 # Table of Contents
 
 * [config.json](#config)
