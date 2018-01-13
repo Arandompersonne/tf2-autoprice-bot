@@ -789,7 +789,32 @@ stdin.addListener("data", function(d) {
         console.log("Autoprice data:");
     }
 });
-autoprice.updateItem(update);
+//autoprice.updateItem(update);
+
+function createListings(listing){
+    if(listings[listing].inventory.length<listings[listing].maxstock){
+        backpack.createBuy(listing);
+    }
+    if(listings[listing].inventory.length>0){
+        backpack.createSell(listings[listing].inventory[0], listing);
+    }
+    if (listing===0){
+        setTimeout(function() {
+            setImmediate(function() {
+                exports.updateItem(listings.length-1);
+            });
+        }, 3000);
+
+    }
+    else{
+        setTimeout(function() {
+            setImmediate(function() {
+                exports.updateItem(listing-1);
+            });
+        }, 3000);
+    }
+}
+createListings(1);
 
 function relog() {
     client.relog(); //relog every 6 hrs
