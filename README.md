@@ -8,9 +8,6 @@ Automatically buys and sells tf2 items while listing on backpack.tf. The bot has
 - checks SR bans
 - calculates profit and logs items sold
 
-
-Major edit:
-autopricing is currently disabled, waiting for fisk response to see what to do. Code is still here just commented out, added basic loop to create listings normally.
 # Table of Contents
 
 * [config.json](#config)
